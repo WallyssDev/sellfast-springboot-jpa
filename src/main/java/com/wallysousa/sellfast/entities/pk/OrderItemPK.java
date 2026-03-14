@@ -3,6 +3,7 @@ package com.wallysousa.sellfast.entities.pk;
 import java.io.Serializable;
 import java.util.Objects;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.wallysousa.sellfast.entities.Order;
 import com.wallysousa.sellfast.entities.Product;
 
@@ -15,6 +16,7 @@ public class OrderItemPK implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@ManyToOne
+	@JsonIgnore
 	@JoinColumn(name = "order_id")
 	private Order order;
 	
