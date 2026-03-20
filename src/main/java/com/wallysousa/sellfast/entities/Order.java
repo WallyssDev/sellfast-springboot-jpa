@@ -1,5 +1,6 @@
 package com.wallysousa.sellfast.entities;
 
+
 import java.io.Serializable;
 import java.time.Instant;
 import java.util.HashSet;
@@ -36,6 +37,7 @@ public class Order implements Serializable {
 	@ManyToOne
 	@JoinColumn(name = "client_id")
 	private User client;
+	
 	
 	@OneToMany(mappedBy = "id.order", fetch = FetchType.EAGER)
 	private Set<OrderItem> items = new HashSet<>();
